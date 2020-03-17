@@ -76,5 +76,9 @@ extension ViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        let orderDetail = OrderDetailsViewController()
+        orderDetail.order = ordersViewModels[indexPath.row]
+        
+        self.navigationController?.pushViewController(orderDetail, animated: true)
     }
 }

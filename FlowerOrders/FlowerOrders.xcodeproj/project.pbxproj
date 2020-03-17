@@ -18,6 +18,7 @@
 		112955D2241FFDE3005F9CBF /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112955D1241FFDE3005F9CBF /* RealmManager.swift */; };
 		112955D4242006FD005F9CBF /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112955D3242006FD005F9CBF /* OrderModel.swift */; };
 		112955DC2420BEB7005F9CBF /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112955DB2420BEB7005F9CBF /* ImageLoader.swift */; };
+		112955E024215B7A005F9CBF /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112955DF24215B7A005F9CBF /* OrderDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		112955D3242006FD005F9CBF /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		112955D924202218005F9CBF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		112955DB2420BEB7005F9CBF /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		112955DF24215B7A005F9CBF /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
 		22E5F1205258F1AC878721B6 /* Pods-FlowerOrders.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerOrders.debug.xcconfig"; path = "Target Support Files/Pods-FlowerOrders/Pods-FlowerOrders.debug.xcconfig"; sourceTree = "<group>"; };
 		504301A946B88B5B05B19C0F /* Pods-FlowerOrders.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerOrders.release.xcconfig"; path = "Target Support Files/Pods-FlowerOrders/Pods-FlowerOrders.release.xcconfig"; sourceTree = "<group>"; };
 		A9A88985665C20867AE43E8B /* Pods_FlowerOrders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowerOrders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 				112955C7241FF563005F9CBF /* OrdersListView.swift */,
 				112955C5241FF42B005F9CBF /* ViewController.swift */,
 				112955CC241FF94C005F9CBF /* OrdersListTableViewCell.swift */,
+				112955DF24215B7A005F9CBF /* OrderDetailsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				112955DC2420BEB7005F9CBF /* ImageLoader.swift in Sources */,
 				112955CD241FF94C005F9CBF /* OrdersListTableViewCell.swift in Sources */,
+				112955E024215B7A005F9CBF /* OrderDetailsViewController.swift in Sources */,
 				112955D4242006FD005F9CBF /* OrderModel.swift in Sources */,
 				112955D2241FFDE3005F9CBF /* RealmManager.swift in Sources */,
 				112955AF241FF36A005F9CBF /* AppDelegate.swift in Sources */,

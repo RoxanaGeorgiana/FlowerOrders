@@ -19,8 +19,8 @@ class OrdersListTableViewCell: UITableViewCell {
                 flowerImage.loadImageWithUrl(imgUrl)
             }
             flowerName.text = order?.flower
-            if let floerPrice = order?.price {
-                flowerPrice.text = String(format: "%f", floerPrice)
+            if let price = order?.price {
+                flowerPrice.text = String(format: "%.1f RON", price)
 
             }
         }
