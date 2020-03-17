@@ -15,7 +15,6 @@ final class NetworkManager {
     private let urlString = "https://demo0091413.mockable.io/myflowers"
     
     var realmManager : RealmManager = RealmManager()
-    
     var onFetchOrders: ((_ orders: [OrderModel]) -> Void)?
     
     func fetchLocations() {

@@ -16,9 +16,6 @@ class ViewController: UIViewController {
     fileprivate var contentView: OrdersListView { return self.view as! OrdersListView }
     fileprivate let kCellIdentifier = "ListOrderCell"
 
-    
-    // MARK: - Initializers
-    
     // MARK: - View lifecycle
     
     override func loadView() {
@@ -36,14 +33,11 @@ class ViewController: UIViewController {
     }
 
     private func setupTableView() {
-        
         let view = OrdersListView()
         view.tableview.delegate = self
         view.tableview.dataSource = self
         view.tableview.register(OrdersListTableViewCell.self, forCellReuseIdentifier: kCellIdentifier)
         self.view = view
-        
-//        contentView.refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
     }
     
     @objc func refresh(_ orders: [OrderModel]) {
@@ -65,15 +59,12 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         guard let cell = tableView.dequeueReusableCell(withIdentifier: kCellIdentifier, for: indexPath) as? OrdersListTableViewCell else {
             assert(false, "Invalid table view cell. Did you forget to register ArtistTableViewCell?")
             return UITableViewCell()
         }
-        cell.contentView.backgroundColor = UIColor.red
-
-//        let viewModel = ordersViewModels[indexPath.row]
-//        cell.viewModel = viewModel
+        let orderModel = ordersViewModels[indexPath.row]
+        cell.order = orderModel
 
         return cell
     }

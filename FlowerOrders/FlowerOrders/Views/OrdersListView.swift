@@ -14,14 +14,12 @@ class OrdersListView: UIView {
         static let rowHeight: CGFloat = 160.0
     }
     var isSetup = false
-    let refreshControl = UIRefreshControl()
     
     let tableview: UITableView = {
         let tv = UITableView()
         tv.backgroundColor = UIColor.white
         tv.rowHeight = Constants.rowHeight
-        tv.separatorStyle = .singleLine
-        tv.separatorColor = UIColor.white
+        tv.separatorStyle = .none
         tv.separatorInset = UIEdgeInsets.zero
         tv.layoutMargins = UIEdgeInsets.zero
         tv.showsVerticalScrollIndicator = false
@@ -55,7 +53,6 @@ class OrdersListView: UIView {
     
     func setup() {
         addSubview(tableview)
-        tableview.insertSubview(refreshControl, at: 0)
     }
 
     // MARK: - Constraints

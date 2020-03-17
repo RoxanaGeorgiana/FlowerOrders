@@ -13,7 +13,6 @@ import RealmSwift
 public protocol RealmDataStore {
     
     var realm: Realm! { get }
-    
     func clean()
 }
 
@@ -48,20 +47,13 @@ public extension Realm {
     
     let configuration = self.configuration
     DispatchQueue.global(qos: .default).async {
-      
-      // Perform block
       let blockRealm = try! Realm(configuration: configuration)
       blockRealm.beginWrite()
-      
       block(blockRealm)
-      
       try! blockRealm.commitWrite()
       
       DispatchQueue.main.async {
-        // Refresh current realm
         self.refresh()
-        
-        // Call completion on main thread
         completion?()
       }
     }
