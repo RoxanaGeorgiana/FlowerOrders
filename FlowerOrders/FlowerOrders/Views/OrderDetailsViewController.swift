@@ -18,13 +18,13 @@ class OrderDetailsViewController: UIViewController {
             flowerName.text = order?.flower
             
             if let deliver = order?.deliver_to {
-                deliverTo.text = "\("Livrare catre: ") \(deliver)"
+                deliverTo.text = "\("Deliver To: ") \(deliver)"
             }
             if let orderPrice = order?.price {
-                price.text = String(format: "Pret:  %.1f  RON", orderPrice)
+                price.text = String(format: "Price:  %.1f  RON", orderPrice)
             }
             if let address = order?.address {
-                orderAddress.text = "\("Adresa: ") \(address)"
+                orderAddress.text = "\("Address: ") \(address)"
             }
         }
     }
