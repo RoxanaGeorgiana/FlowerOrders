@@ -15,7 +15,7 @@ final class NetworkManager {
     private let urlString = "https://demo0091413.mockable.io/myflowers"
     
     var realmManager : RealmManager = RealmManager()
-    var onFetchOrders: ((_ orders: [OrderModel]) -> Void)?
+    var onFetchOrdersCompletion: ((_ orders: [OrderModel]) -> Void)?
     
     func fetchLocations() {
         if let url = URL(string:  urlString) {
@@ -45,7 +45,7 @@ final class NetworkManager {
                 }
             }
         }, completion: {
-            self.onFetchOrders?(myOrders)
+            self.onFetchOrdersCompletion?(myOrders)
         })
     }
 }
